@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <style>
+            .cookie-banner {
+                box-sizing: border-box;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                padding: 10px 32px;
+                background: #9BB720;
+                color: #fff;
+                text-align: center;
+                z-index: 999999;
+                box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .cookie-banner a {
+                color: #fff;
+                font-weight: 600;
+            }
+
+            .cookie-banner .cookie-close {
+                box-sizing: border-box;
+                display: inline-block;
+                margin-left: 32px;
+                padding: 7px 15px;
+                background: #e3e3e3;
+                border-radius: 0.3em;
+                border: 3px solid rgba(0,0,0,0.15);
+                color: #9BB720;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            .cookie-banner .cookie-close:hover {
+                background: #fff;
+            }
+
+            body.cookie-banner-active {
+                top: 65px;
+                position: relative;
+                transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                will-change: top;
+            }
+
+            @media screen and (max-width: 1253px){
+                body.cookie-banner-active {
+                    top: 90px;
+                }
+            }
+
+            @media screen and (max-width: 605px){
+                body.cookie-banner-active {
+                    top: 106px;
+                }
+            }
+
+            @media screen and (max-width: 447px){
+                body.cookie-banner-active {
+                    top: 128px;
+                }
+            }
+
+
+            @media screen and (max-width: 359px){
+                body.cookie-banner-active {
+                    top: 150px;
+                }
+            }
+        </style>
+        <script src="../bower_components/jquery/dist/jquery.slim.min.js"></script>
+        <script src="../bower_components/js-cookie/src/js.cookie.js"></script>
+        <script src="../src/cookie-banner.js"></script>
+    </head>
+    <body>
+        <script>
+            (function($){
+                $(function(){
+                    $('body').cookieBanner({
+                        animate: {
+                            close: function(e){
+                                $('body').css({
+                                    'top': '0'
+                                });
+
+                                $('.cookie-banner').css({
+                                    'transform': 'translate3d(0, -100%, 0)'
+                                });
+
+                                setTimeout(function(){
+                                    $('body').removeClass('cookie-banner-active')
+                                            .find('.cookie-banner').remove();
+                                }, 310);
+                            }
+                        },
+                        link: {
+                            url: '/privacy-policy'
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>
