@@ -4,7 +4,7 @@ Cookie Banner JS is a simple jQuery plugin that will create a cookie banner on
 your site.
 
 It is designed to be as minimalistic as possible, so there is no styling/css
-in the package src, but you're welcome to view the examples if you want to see
+in the package src, but you're welcome to view the [examples](examples/fixed-top.html) if you want to see
 some examples
 
 ## Installation
