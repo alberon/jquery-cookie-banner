@@ -1,0 +1,27 @@
+{
+  "name": "jquery-cookie-banner",
+  "authors": [
+    "Tony Lopez <tony@alberon.co.uk>"
+  ],
+  "description": "A simple jQuery plugin creating a cookie banner",
+  "main": "src/cookie-banner.js",
+  "keywords": [
+    "cookie",
+    "banner",
+    "jquery",
+    "js-cookie"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/alberon/jquery-cookie-banner",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "js-cookie": "^2.1.3"
+  }
+}
