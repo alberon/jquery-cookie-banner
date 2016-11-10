@@ -4,8 +4,8 @@ Cookie Banner JS is a simple jQuery plugin that will create a cookie banner on
 your site.
 
 It is designed to be as minimalistic as possible, so there is no styling/css
-in the package src, but you're welcome to view the [examples](examples/fixed-top.html) if you want to see
-some examples
+in the package src, but you're welcome to view the
+[examples](examples/fixed-top.html) if you want to see some examples
 
 ## Installation
 
@@ -15,6 +15,11 @@ This package is available via bower or you can view the src on
 ```bash
 bower install jquery-cookie-banner
 ```
+
+Then you can use the [dist directory](dist) to load in the files that you 
+
+*Note: in the dist folder there are 3 main files, a raw file, a minified file
+and a packaged file, use whichever one your project requires*
 
 ## Usage
 
@@ -60,6 +65,48 @@ cookie: {
     text: 'Accept & Close'
 }
 ```
+
+There are a few properties of cookie that may be added as additionals, which are
+as follows
+
+*Note: these are omitted by default*
+
+##### expires
+
+Define when the cookie will be removed
+
+```javascript
+expires: 7
+```
+
+*Note: this field can be a number (i.e. days from creation) or a specific date*
+
+##### path
+
+A `String` indicating the path where the cookie is visible
+
+```javascript
+path: '/'
+```
+
+##### domain
+
+A `String` indicating a valid domain where the cookie should be visible.
+The cookie will also be visible to all subdomains
+
+```javascript
+domain: 'subdomain.site.com'
+```
+
+##### secure
+
+Either `true` or `false`, indicating if the cookie transmission requires a
+secure protocol (https)
+
+```javascript
+secure: true
+```
+
 
 #### link
 
