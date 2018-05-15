@@ -24,12 +24,15 @@
             },
             cookie: {
                 name: 'accepted_cookie_policy',
-                text:'Accept & Close',
+                text: 'Accept & Close',
                 value: true
             },
             link: {
                 url: '/cookie-policy',
                 text: 'Cookies Policy.'
+            },
+            closer: {
+                cssClass: ''
             },
             text: 'This site uses cookies to give you the best possible user ' +
             'experience. To find out more please view our ',
@@ -86,7 +89,7 @@
          */
         this.renderCloser = function(){
             return $('<div />', {
-                class: 'cookie-close',
+                class: ['cookie-close', CookieBanner.options.closer.cssClass].join(' '),
                 text: CookieBanner.options.cookie.text
             }).on(click, CookieBanner.closeAndAccept);
         };
