@@ -1,4 +1,8 @@
 {
+  "name": "jquery-cookie-banner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",
@@ -8,5 +12,8 @@
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "run-sequence": "^1.2.2"
-  }
+  },
+  "repository": "git@github.com/edu2004eu/jquery-cookie-banner.git",
+  "author": "",
+  "license": "ISC"
 }
